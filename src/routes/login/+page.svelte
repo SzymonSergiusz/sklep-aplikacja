@@ -6,8 +6,6 @@
     let email: string = '';
     let password: string = '';
 
-
-
     async function postDataWithAuth(username: string, password: string) {
         let url = 'http://localhost:8080/login'
         const headers = new Headers();
@@ -15,6 +13,7 @@
 
         const requestOptions = {
             method: 'POST',
+            credentials: 'include',
             headers: headers,
             body: JSON.stringify('')
         };

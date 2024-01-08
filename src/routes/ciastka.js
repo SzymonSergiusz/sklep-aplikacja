@@ -17,9 +17,20 @@ export function login(permission) {
     }
 }
 
-export function logout() {
+export async function logout() {
     if (typeof window !== 'undefined') {
         localStorage.setItem('loggedIn', 'false');
         localStorage.setItem('permissions', 'brak');
     }
+    const requestOptions = {
+        method: 'POST',
+        credentials: 'include', // Include session cookies
+        headers: {
+            'Content-Type': 'application/json',
+            'connection' : 'keep-alive'
+        },
+
+    };
+    await fetch('http://localhost:8080/logout', requestOptions);
+
 }

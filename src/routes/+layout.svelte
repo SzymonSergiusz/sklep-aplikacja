@@ -78,7 +78,7 @@
 				</a>
 				{/if}
 
-				{#if getPermissions() == 'pracownik'}
+				{#if getPermissions() === 'pracownik'}
 					<a
 							class="btn btn-sm variant-ghost-surface"
 							href="/dodajProdukt"
