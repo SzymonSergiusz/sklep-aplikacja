@@ -36,7 +36,6 @@
             const response = await postDataWithAuth(email, password);
             console.log('Success:', response);
 
-            //here set cookies
             login(response.uprawnienia)
 
             await goto('/')
@@ -52,7 +51,7 @@
     <form on:submit|preventDefault={handleSubmit} class="form">
         <label class="label" for="email">
             <span>Email</span>
-            <input bind:value={email} class="input" type="email" placeholder="Podaj nazwę użytkownika"/>
+            <input bind:value={email} class="input" type="email" placeholder="Podaj swój email"/>
         </label>
 
         <label class="label" for="password">
@@ -62,6 +61,15 @@
         <br>
         <button type="submit" class="btn variant-filled">Zaloguj się</button>
     </form>
+
+
+    <div>
+        Nie posiadasz konta?
+        <a href="/login/register">
+            Zarejestruj się tutaj
+        </a>
+    </div>
+
 </div>
 
 <style>

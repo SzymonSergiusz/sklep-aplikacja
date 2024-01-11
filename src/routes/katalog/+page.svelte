@@ -7,7 +7,6 @@
 
 
 {#each data.products as game}
-    <!-- Tworzenie instancji klasy Game z danymi produktu -->
     <GameCard
             cena={game.cena}
             datawydania={game.datawydania}

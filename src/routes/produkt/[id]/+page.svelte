@@ -11,11 +11,9 @@
                 'Content-Type': 'application/json',
                 'connection' : 'keep-alive'
             },
-            // Include body data if required
             body: JSON.stringify({id})
         };
 
-        // Adjust the URL and other request options as needed
         const res = await fetch('http://localhost:8080/user/orders', requestOptions);
         const orders = await res.json();
         console.log(orders);

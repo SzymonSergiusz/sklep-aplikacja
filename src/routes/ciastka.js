@@ -24,7 +24,7 @@ export async function logout() {
     }
     const requestOptions = {
         method: 'POST',
-        credentials: 'include', // Include session cookies
+        credentials: 'include',
         headers: {
             'Content-Type': 'application/json',
             'connection' : 'keep-alive'
