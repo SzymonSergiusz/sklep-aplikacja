@@ -39,6 +39,7 @@
                     opis={game.opis}
                     platformaid={game.platformaid}
                     wydawcaid={game.wydawcaid}
+                    src ='http://localhost:8080/images/{game.nazwa}'
                 />
             </div>
         {/each}

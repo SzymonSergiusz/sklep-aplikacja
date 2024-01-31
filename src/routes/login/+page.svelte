@@ -21,11 +21,11 @@
         try {
             const response = await fetch(url, requestOptions);
             if (!response.ok) {
-                throw new Error('Network response was not ok.');
+                throw new Error('Odpowiedź nie ok');
             }
             return await response.json();
         } catch (error) {
-            console.error('There was a problem with the fetch operation:', error);
+            console.error('Error:', error);
             throw error;
         }
     }

@@ -25,7 +25,6 @@
                 nazwisko: nazwisko
             })
         };
-
         try {
             const response = await fetch(url, requestOptions);
             if (!response.ok) {

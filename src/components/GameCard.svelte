@@ -10,7 +10,8 @@
     export let opis;
     export let platformaid;
     export let wydawcaid;
-    export let src = "http://localhost:8080/images/"+nazwa
+    // export let src = "http://localhost:8080/images/"+nazwa
+    export let src
 </script>
 
 
@@ -18,7 +19,7 @@
     <a href="/produkt/{id}">
 
 
-    <img class = "game_logo" src = {src} alt = {nazwa}/>
+    <img class = "game_logo"  src = {src} alt = {nazwa}/>
 
     <h4 class="h4">{nazwa}</h4>
     <h5 class="h5">{cena}</h5>
